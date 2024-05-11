@@ -3,12 +3,13 @@
         <section class="text-center pt-10">
             <h1 class="font-bold text-4xl">Let's Find You A Great Job</h1>
 
-            <form action="">
+            <form action="/search">
                 <div class="relative mt-10 rounded-md shadow-sm w-full max-w-2xl mx-auto">
                     <div class="pointer-events-none absolute inset-y-0 right-6 flex items-center pl-3">
                         <span class="w-4 h-4 bg-white"></span>
                     </div>
                     <input type="text"
+                           name="q"
                            class="block w-full rounded-xl py-4 px-5 bg-white/5 border border-white/10"
                            placeholder="I'm looking for...">
                 </div>

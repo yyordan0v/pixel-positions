@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap"
         rel="stylesheet">
-    
+
     @vite(['resources/css/app.css', 'resources/css/app.css'])
 </head>
 <body class="bg-black text-white font-hanken-grotesk">
@@ -32,10 +32,27 @@
 
         <div>
             <div class="inline-flex items-center gap-x-2">
-                <span class="w-2 h-2 bg-blue-500 inline-block"></span>
-                <h3 class="font-bold">
-                    <a href="#">Post a Job</a>
-                </h3>
+                @auth()
+                    <span class="w-2 h-2 bg-blue-500 inline-block"></span>
+                    <h3 class="font-bold">
+                        <a href="{{ route('jobs.create') }}">Post a Job</a>
+                    </h3>
+                    <div class="ml-10 font-bold">
+                        <form action="/logout" method="POST">
+                            @csrf
+                            @method('DELETE')
+
+                            <button>Log Out</button>
+                        </form>
+                    </div>
+                @endauth
+
+                @guest()
+                    <div class="space-x-6 font-bold">
+                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ route('login') }}">Log In</a>
+                    </div>
+                @endguest
             </div>
         </div>
     </nav>
