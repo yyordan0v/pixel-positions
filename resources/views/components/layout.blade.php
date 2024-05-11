@@ -25,9 +25,9 @@
         </div>
 
         <div class="space-x-6 font-bold">
-            <a href="#">Jobs</a>
-            <a href="#">Jobs</a>
-            <a href="#">Jobs</a>
+            <a href="/">Jobs</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
         </div>
 
         <div>
