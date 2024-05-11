@@ -15,4 +15,4 @@
     }
 @endphp
 
-<a href="/tags/{{ strtolower($tag->name) }}" {{ $attributes(['class' => $classes]) }}>{{ $tag->name }}</a>
+<a href="/tags/{{ strtolower($tag->name) }}" {{ $attributes(['class' => $classes]) }}>{{ ucwords($tag->name) }}</a>
